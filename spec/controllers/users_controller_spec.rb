@@ -36,7 +36,6 @@ RSpec.describe './users', type: :request do
       it 'render correct body placeholder' do
         expect(response.body).to include('Here is the profile page and list of posts for a specific user')
       end
-
     end
   end
 end
