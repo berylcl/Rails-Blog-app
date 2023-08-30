@@ -3,7 +3,9 @@
 </div>
 
 <a name="readme-top"></a>
+
 <!-- TABLE OF CONTENTS -->
+
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
@@ -29,6 +31,7 @@
 > This is a blog app based on ruby on rails. This app will feature users, posts, comments, likes.
 
 ## 🛠 Built With <a name="built-with"></a>
+
 <h2> Tech Stack </h2>
 - Ruby on Rails
 - PSQL
@@ -101,6 +104,12 @@ To run tests, run the following command:
 - Twitter: [omg_its_beryl](https://twitter.com/omg_its_beryl)
 - LinkedIn: [gakii](https://www.linkedin.com/in/gakii-beryl/)
 
+👤 **Dieum Akonkwa**
+
+- GitHub: [@dieum512](https://github.com/dieum512/)
+- Twitter: [@dieumakonkw](https://twitter.com/dieumakonkw)
+- LinkedIn: [Dieum Akonkwa](https://www.linkedin.com/in/dieum-akonkwa/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
@@ -118,6 +127,7 @@ To run tests, run the following command:
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/berylcl/Blog-app/issues).
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- SUPPORT -->
