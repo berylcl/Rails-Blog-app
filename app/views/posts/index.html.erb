@@ -8,7 +8,7 @@
     <%= render partial: 'shared/user_photo', locals: { user: @user } %>
     <%= render partial: 'shared/user_deets', locals: { user: @user } %>
   </div>
-  <% @posts.each do |post|%>
+  <% @posts.each do |post| %>
     <a href="<%= user_post_path(@user, post) %>">
       <div class="user-post">
         <div class="post">
@@ -20,7 +20,7 @@
           </div>
         </div>
         <h3>Comments:</h3>
-        <% post.recent_comments.each do |comment, index| %>
+        <% post.recent_comments.each do |comment| %>
           <div class="post-comments">
             <span><%= comment.author.name %>:</span>
             <span><%= comment.text %></span>
