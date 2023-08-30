@@ -6,13 +6,19 @@ RSpec.describe 'Post views', type: :feature do
     @post = @user1.posts.create(title: 'This is my first post', text: 'This is the content of my first post')
     @user1.posts.create(title: 'This is my second post', text: 'This is the content of my second post')
     @user2 = User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo1', bio: 'Teacher from Poland')
-    @post.comments.create(text: 'This is the first comment', author_id: @user2.id)
+    @comment = @post.comments.create(text: 'This is the first comment', author_id: @user2.id)
   end
 
   describe 'post show page' do
     it 'should show user\'s name' do
       visit user_posts_path(@user1.id)
       expect(page).to have_content('Tom')
+    end
+    it "Displays the title of the post" do
+      visit user_post_path(@user1, @post)
+      expected_title = "Post #" + @post.id.to_s + " by " + @user1.name
+      save_and_open_page
+      expect(page).to have_content(expected_title)
     end
 
     it 'should show the number of comments' do
@@ -43,6 +49,31 @@ RSpec.describe 'Post views', type: :feature do
     it 'should see the number of likes' do
       visit user_post_path(@user1.id, @post.id)
       expect(page).to have_content('Likes: 0')
+    end
+
+    it 'should show the number of comments for the post' do
+      visit user_post_path(@user1.id, @post.id)
+      expect(page).to have_content('Comments: 1')
+    end
+
+    it 'should show the number of likes for the post' do
+      visit user_post_path(@user1.id, @post.id)
+      expect(page).to have_content('Likes: 0')
+    end
+
+    it 'should show the post body' do
+      visit user_post_path(@user1.id, @post.id)
+      expect(page).to have_content('This is the content of my first post')
+    end
+
+    it 'Displays the username of each commenter' do
+      visit user_post_path(@user1, @post)
+      expect(page).to have_content(@comment.author.name)
+    end
+
+    it 'should show the comment each commentor left' do
+      visit user_post_path(@user1.id, @post.id)
+      expect(page).to have_content('This is the first comment')
     end
   end
 end
