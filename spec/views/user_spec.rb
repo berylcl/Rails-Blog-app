@@ -32,5 +32,12 @@ RSpec.describe 'Users', type: :request do
     it 'is a success' do
       expect(response).to have_http_status(:ok)
     end
+
+    it 'Should include the template text' do
+      expect(response.body).to include('Teacher from Mexico.')
+    end
+    it 'renders show template' do
+      expect(response).to render_template(:show)
+    end
   end
 end
