@@ -25,5 +25,4 @@ RSpec.feature 'User Index', type: :feature do
     expect(page).to have_content('3')
     expect(page).to have_content('0')
   end
-
 end
