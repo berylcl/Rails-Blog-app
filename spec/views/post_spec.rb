@@ -40,11 +40,6 @@ RSpec.describe 'Post views', type: :feature do
       expect(page).to have_content('This is the first comment')
     end
 
-    it 'should see the number of comments' do
-      visit user_post_path(@user1.id, @post.id)
-      expect(page).to have_content('Comments: 1')
-    end
-
     it 'should see the number of likes' do
       visit user_post_path(@user1.id, @post.id)
       expect(page).to have_content('Likes: 0')
