@@ -10,7 +10,6 @@ RSpec.describe 'Post views', type: :feature do
   end
 
   describe 'post show page' do
-
     it 'should show user\'s name' do
       visit user_posts_path(@user1.id)
       expect(page).to have_content('Tom')
