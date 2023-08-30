@@ -9,6 +9,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.includes(:comments, :author).find(params[:id])
   end
+
   def new
     @user = current_user
     @post = @user.posts.new

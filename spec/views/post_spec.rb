@@ -14,10 +14,9 @@ RSpec.describe 'Post views', type: :feature do
       visit user_posts_path(@user1.id)
       expect(page).to have_content('Tom')
     end
-    it "Displays the title of the post" do
+    it 'Displays the title of the post' do
       visit user_post_path(@user1, @post)
-      expected_title = "Post #" + @post.id.to_s + " by " + @user1.name
-      save_and_open_page
+      expected_title = "Post ##{@post.id} by #{@user1.name}"
       expect(page).to have_content(expected_title)
     end
 
