@@ -20,21 +20,28 @@ RSpec.describe './users', type: :request do
       end
     end
 
-    context 'GET show' do
+    context 'GET show with existing user' do
       before(:example) do
-        get '/users/1'
+        user = User.create(name: 'John', bio: 'Bio')
+        get "/users/#{user.id}"
       end
 
       it 'success for show action' do
         expect(response).to have_http_status(:success)
       end
+    end
 
-      it 'render correct body placeholder text for show action' do
-        expect(response).to render_template(:show)
+    context 'GET show with non-existent user' do
+      before(:example) do
+        get '/users/999' # Use a non-existent user ID
       end
 
-      it 'render correct body placeholder' do
-        expect(response.body).to include('Here is the profile page and list of posts for a specific user')
+      it 'redirects to users_path' do
+        expect(response).to redirect_to(users_path)
+      end
+
+      it 'sets a flash message' do
+        expect(flash[:alert]).to eq('User not found, back to users page')
       end
     end
   end
