@@ -172,3 +172,45 @@ h2 {
   font-size: 18px;
   cursor: pointer;
 }
+
+h1 {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+/* Style form container */
+.field {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333; /* Text color */
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  color: #555; /* Text color */
+}
+
+/* Style form actions */
+.actions {
+  text-align: center;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
