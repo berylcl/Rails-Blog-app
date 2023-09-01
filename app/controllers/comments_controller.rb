@@ -22,6 +22,11 @@ class CommentsController < ApplicationController
 
   private
 
+  def index
+    @user = User.find(params[:user_id])
+    @posts = @user.posts
+  end
+
   def find_user
     @user = current_user
   end
