@@ -13,8 +13,8 @@ gem 'sprockets-rails'
 gem 'pg', '~> 1.1'
 gem 'rails-controller-testing'
 # Use the Puma web server [https://github.com/puma/puma]
-gem 'puma', '~> 5.0'
 gem 'devise'
+gem 'puma', '~> 5.0'
 
 gem 'rspec'
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
