@@ -71,17 +71,16 @@ a {
   padding: 1rem;
 }
 
-#back-btn {
-  margin-bottom: 1rem;
-}
-
 .bio {
   border: black solid 2px;
   padding: 0.5rem 0.5rem;
   margin-bottom: 1rem;
 }
 
-body, h1, h2, p {
+body,
+h1,
+h2,
+p {
   margin: 0;
   padding: 0;
 }
@@ -107,23 +106,12 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* Style form fields */
-.field {
-  margin-bottom: 20px;
-}
-
 .input {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
   font-size: 16px;
-}
-
-.label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 14px;
 }
 
 /* Style remember me checkbox */
@@ -187,7 +175,7 @@ h1 {
   display: block;
   font-size: 16px;
   margin-bottom: 5px;
-  color: #333; /* Text color */
+  color: #333;
 }
 
 .input,
@@ -197,7 +185,7 @@ h1 {
   border: 1px solid #ccc;
   border-radius: 3px;
   font-size: 16px;
-  color: #555; /* Text color */
+  color: #555;
 }
 
 /* Style form actions */
